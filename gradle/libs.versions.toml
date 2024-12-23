@@ -1,0 +1,168 @@
+[versions]
+agp = "8.2.2"
+kotlin = "2.0.20"
+compose = "1.7.6"
+compose-material3 = "1.3.1"
+androidx-activityCompose = "1.9.3"
+serialization = "1.5.1"
+splash-screen = "1.0.1"
+accompanistSystemuicontroller = "0.36.0"
+
+#ViewModel & Coroutines
+androidx-lifecycle = "2.8.4"
+coroutines = "1.9.0"
+navigationRuntimeKtx = "2.8.5"
+
+#Navigation
+navigation = "2.8.5"
+
+#DI With Koin
+koin = "4.0.0"
+
+#Async Image With Coil
+coil3 = "3.0.4"
+
+#Networing With Ktor
+ktor = "3.0.1"
+
+#DataStore For LocalData
+datastore = "1.1.1"
+
+#Google Map
+maps-compose = "4.3.3"
+play-services-maps = "18.2.0"
+playServicesLocation = "21.3.0"
+appcompat = "1.7.0"
+
+#Skie
+skie = "0.10.0"
+
+
+
+
+[libraries]
+# Kotlin Libraries(Shared)
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+# Koin Dependency Injection (Shared)
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
+
+# Ktor Networking (Shared)
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+#DataStore For LocalData(Shared)
+datastore = { module = "androidx.datastore:datastore-core", version.ref = "datastore" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
+
+
+# Android UI Compose
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+viewmodel-compose ={ module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+lifecycle-runtime = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+android-splash-screen = { module = "androidx.core:core-splashscreen", version.ref = "splash-screen" }
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistSystemuicontroller" }
+
+
+#Android Koin Dependency Injection
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+
+# Android Navigation Libraries
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+
+# Android Async Image Coil Libraries
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil3" }
+
+#Google Map
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "maps-compose" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "play-services-maps" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+skie = { id = "co.touchlab.skie", version.ref = "skie" }
+
+[bundles]
+compose = [
+    "androidx-activity-compose",
+    "compose-ui",
+    "compose-ui-tooling",
+    "compose-ui-tooling-preview",
+    "compose-foundation",
+    "compose-material3",
+    "viewmodel-compose",
+    "android-splash-screen",
+]
+
+viewModel = [
+    "lifecycle-runtime",
+    "lifecycle-viewmodel",
+]
+
+kotlin = [
+    "kotlin-stdlib",
+    "kotlinx-coroutines-core",
+    "kotlinx-serialization-json",
+    "kotlin-reflect",
+    "kotlin-test",
+]
+
+ktor = [
+    "ktor-client-core",
+    "ktor-client-content-negotiation",
+    "ktor-client-auth",
+    "ktor-client-logging",
+    "ktor-serialization-kotlinx-json",
+]
+
+koin = [
+    "koin-core",
+    "koin-compose",
+    "koin-composeVM",
+]
+android-koin = [
+    "koin-android",
+    "koin-android-compose",
+]
+
+android-navigation = [
+    "navigation-compose",
+    "androidx-navigation-runtime-ktx",
+]
+
+android-coil = [
+    "coil-compose",
+    "coil-network-ktor",
+]
+
+datastore = [
+    "datastore",
+    "datastore-preferences",
+]
